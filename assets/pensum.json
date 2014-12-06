@@ -1,0 +1,129 @@
+[
+  {
+    "id" : 1,
+    "Asignatura" :
+      [
+        {
+            "Codigo" : "ESP101",
+            "Descripcion": "ANALISIS DE TEXTOS DISCURSIVOS",
+            "Creditos" : "3"
+        },
+        
+         {
+            "Codigo" : "ISO100",
+            "Descripcion": "FUNDAMENTOS DE INFORMATICA Y ALGORITMOS",
+            "Creditos" : "5"
+         },
+
+         {
+            "Codigo" : "ISO105",
+            "Descripcion": "FUNDAMENTOS DE SISTEMAS OPERATIVOS Y COMUNICACIONES",
+            "Creditos" : "3"
+         },
+
+         {
+            "Codigo" : "MAT126",
+            "Descripcion": "MATEMATICA BASICA PARA INGENIERIA",
+            "Creditos" : "4"
+          },
+    
+        {
+            "Codigo" : "SOC011",
+            "Descripcion": "HISTORIA SOCIAL DOMINICANA",
+            "Creditos" : "3"
+        },
+
+        {
+            "Codigo" : "SOC030",
+            "Descripcion": "ORIENTACION UNIVERSITARIA",
+            "Creditos" : "2"
+        },
+
+        {
+            "Codigo" : "TEC098",
+            "Descripcion": "INTRODUCCION A LA INGENIERIA",
+            "Creditos" : "2"
+        }
+     ]
+  },
+
+  {
+    "id" : 2,
+    "Asignatura" : 
+      [
+        {
+            "Codigo" : "ESP102",
+            "Descripcion": "REDACCION DE TEXTOS DISCURSIVOS",
+            "Creditos" : "4"
+
+       },
+        
+         {
+            "Codigo" : "ING701",
+            "Descripcion": "FISICA I Y LABORATORIO",
+            "Creditos" : "5"
+       },
+
+         {
+            "Codigo" : "ISO200",
+            "Descripcion": "PROGRAMACION Y ESTRUCTURAS DE DATOS",
+            "Creditos" : "5"
+       },
+
+         {
+            "Codigo" : "MAT127",
+            "Descripcion": "MATEMATICA SUPERIOR PARA INGENIERIA",
+            "Creditos" : "5"
+       },
+
+        {
+            "Codigo" : "SOC043",
+            "Descripcion": "GESTION AMBIENTAL",
+            "Creditos" : "2"
+       }
+     ]
+  },
+
+  {
+    "id" : 3,
+    "Asignatura" : 
+     [
+        {
+            "Codigo" : "ESP103",
+            "Descripcion": "REDACCION DE TEXTOS DISCURSIVOS II",
+            "Creditos" : "4"
+       },
+
+        {
+            "Codigo" : "INF111",
+            "Descripcion": "PROGRAMACION ORIENTADA A OBJETOS",
+            "Creditos" : "3"
+       },
+
+         {
+            "Codigo" : "ISO300",
+            "Descripcion": "FUNDAMENTOS DE INGENIERIA DE SOFTWARE",
+            "Creditos" : "4"
+       },
+
+         {
+            "Codigo" : "ISO305",
+            "Descripcion": "DISEÑO WEB I",
+            "Creditos" : "4"
+       },
+
+        {
+            "Codigo" : "MAT127",
+            "Descripcion": "ALGEBRA LINEAL",
+            "Creditos" : "4"
+       },
+
+        {
+            "Codigo" : "MAT127",
+            "Descripcion": "RELACIONES HUMANAS",
+            "Creditos" : "3"       }
+
+     ]
+  }
+]
+

@@ -1,0 +1,237 @@
+<div class="ibody">
+
+    <div class="jumbotron">
+        <h1>¡Matricúlate!</h1>
+    </div>
+
+    <div class="fcontacto">
+
+        <div class="logo"><br>
+         <img src="images/student.png" height="125" width="195">
+         <img src="images/done.png" height="125" width="195">
+        </div>
+
+        <form role="form" method="post" id="fcontacto" action="./">
+
+            <div class="row form-group">
+                <div class="col-md-12">
+                    <label>Nombre:</label>
+                    <input type="text" id="name" class="form-control"  ng-model="nombre" required="required">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Apellido paterno:</label>
+                    <input type="text"  id="ApellidoP" class="form-control" ng-model="apellido"   required="required">
+                </div>
+
+                <div class="col-md-6">
+                    <label>Apellido materno:</label>
+                    <input type="text"  id="ApellidoM" ng-model="apellido2"  class="form-control">
+                </div>
+            </div>
+
+        <div class="row form-group" ng-show="validateApellido()">
+            <div class="col-md-12">
+                <span style="color:red">
+                    El apellido debe ser diferente o no contener numeros. </span>
+            </div>
+        </div>
+
+         
+             <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Fecha nacimiento (dd/mm/aaaa):</label>
+                       <input type="date" id="FechaN" class="form-control" required="required">
+                </div>
+
+                <div class="col-md-6">
+                    <label>Lugar de nacimiento:</label>
+                    <input type="text" id="LugarN" class="form-control"  required="required">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Género:</label>
+
+                    <select  id="Género" class="form-control" required="required">
+                         <option selected="selected">Masculino</option>
+                        <option>Femenino</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label>Estado civil:</label>
+                     <select id="EstadoC" class="form-control" required="required">
+                        <option selected="selected">Soltero(a)</option>
+                        <option>Casado(a)</option>
+                        <option>Divorciado(a)</option>
+                        <option>Viudo(a)</option>
+                        <option>Separado(a)</option>
+                        <option>Unión Libre</option>
+                        <option>Otro</option>
+                    </select>
+                </div> 
+            </div>
+
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Correo primario:</label>
+                    <input type="email" id="CorreoP" class="form-control" required="required" placeholder="Ej. ejemplo@gmail.com">
+                </div>
+
+                <div class="col-md-6">
+                   <label>Correo Secundario:</label>
+                    <input type="email" id="CorreoS" class="form-control" required="required" placeholder="Ej. ejemplo2@gmail.com">
+                </div> 
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Cédula:</label>
+                    <input type="text"  id="ApellidoP" class="form-control" ng-model="cedula" required="required">
+                </div>
+
+                <div class="col-md-6">
+                   <label>País de origen:</label>
+                    <select id="Pais" class="form-control" required="required">
+                    <option selected="selected" value="DOM">REPUBLICA DOMINICANA</option>
+                        <option value="ANT">ANTIGUA Y BARBUDA</option>
+                        <option value="ARG">ARGENTINA</option>
+                        <option value="ARU">ARUBA</option>
+                        <option value="AUS">AUSTRIA</option>
+                        <option value="BEL">BELICE</option>
+                        <option value="BOL">BOLIVIA</option>
+                        <option value="BRA">BRASIL</option>
+                        <option value="BUL">BULGARIA</option>
+                        <option value="CHI">CHILE</option>
+                        <option value="CHN">CHINA</option>
+                        <option value="COL">COLOMBIA</option>
+                        <option value="COR">COREA</option>
+                        <option value="COS">COSTA RICA</option>
+                        <option value="CUB">CUBA</option>
+                        <option value="ECU">ECUADOR</option>
+                        <option value="SAL">EL SALVADOR</option>
+                        <option value="ESP">ESPA&#209;A</option>
+                        <option value="USA">ESTADOS UNIDOS DE AMERICA</option>
+                        <option value="FIN">FINLANDIA</option>
+                        <option value="FRA">FRANCIA</option>
+                        <option value="GUA">GUATEMALA</option>
+                        <option value="HAI">HAITI</option>
+                        <option value="HOL">HOLANDA</option>
+                        <option value="HON">HONDURAS</option>
+                        <option value="ITA">ITALIA</option>
+                        <option value="JAM">JAMAICA</option>
+                        <option value="JAP">JAPON</option>
+                        <option value="LIB">LIBANO</option>
+                        <option value="MEX">MEXICO</option>
+                        <option value="NIC">NICARAGUA</option>
+                        <option value="PAK">PAKISTAN</option>
+                        <option value="PAN">PANAMA</option>
+                        <option value="PAR">PARAGUAY</option>
+                        <option value="PER">PERU</option>
+                        <option value="PR">PUERTO RICO</option>
+                        <option value="ALB">REPUBLICA DE ALBANIA</option>
+                        <option value="RUM">RUMANIA</option>
+                        <option value="RUS">RUSA</option>
+                        <option value="SIR">SIRIA</option>
+                        <option value="SUI">SUIZA</option>
+                        <option value="TAI">TAIWAN</option>
+                        <option value="URU">URUGUAY</option>
+                        <option value="VEN">VENEZUELA</option>
+                        <option value="YUG">YUGOSLAVA</option>
+                    </select>
+                </div> 
+            </div>
+
+        <div class="row form-group" ng-show="validateCedula()">
+            <div class="col-md-12">
+                <span style="color:red">
+                    La cedula debe tener 10 números y ser válida. </span>
+            </div>
+        </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Provincia:</label>
+                    <select id="Provincia" class="form-control" required="required">
+                        <option selected="selected" value="1">DISTRITO NACIONAL, D.N.</option>
+                        <option value="2">AZUA</option>
+                        <option value="3">BAHORUCO</option>
+                        <option value="4">BARAHONA</option>
+                        <option value="5">DAJABON</option>
+                        <option value="6">DUARTE</option>
+                        <option value="8">EL SEIBO</option>
+                        <option value="7">ELIAS PI&#209;A</option>
+                        <option value="11">ENSANCHE ALTAGRACIA</option>
+                        <option value="9">ESPAILLAT</option>
+                        <option value="30">HATO MAYOR</option>
+                        <option value="10">INDEPENDENCIA</option>
+                        <option value="12">LA ROMANA</option>
+                        <option value="13">LA VEGA</option>
+                        <option value="14">MARIA TRINIDAD SANCHEZ</option>
+                        <option value="28">MONSE&#209;OR NOUEL</option>
+                        <option value="15">MONTE CRISTI</option>
+                        <option value="29">MONTE PLATA</option>
+                        <option value="16">PEDERNALES</option>
+                        <option value="17">PERAVIA</option>
+                        <option value="18">PUERTO PLATA</option>
+                        <option value="19">SALCEDO</option>
+                        <option value="20">SAMANA</option>
+                        <option value="21">SAN CRISTOBAL</option>
+                        <option value="31">SAN JOSE DE OCOA</option>
+                        <option value="22">SAN JUAN</option>
+                        <option value="23">SAN PEDRO DE MACORIS</option>
+                        <option value="24">SANCHEZ RAMIREZ</option>
+                        <option value="25">SANTIAGO</option>
+                        <option value="26">SANTIAGO RODRIGUEZ</option>
+                        <option value="32">SANTO DOMINGO ESTE</option>
+                        <option value="33">SANTO DOMINGO NORTE</option>
+                        <option value="34">SANTO DOMINGO OESTE</option>
+                        <option value="27">VALVERDE MAO</option>
+                    </select>
+                </div>
+
+                <div class="col-md-6">
+                    <label>Dirección (Calle/Avenida):</label>
+                    <input type="text"  id="Direccion" class="form-control">
+                </div>
+
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Número (Casa/Edificio):</label>
+                    <input type="tel" id="NumeroC" class="form-control" placeholder="Ej. 8095975241" >
+                </div>
+
+                <div class="col-md-6">
+                    <label>Celular:</label>
+                    <input type="tel" id="Celular" class="form-control" placeholder="Ej. 8291112222">
+                </div>
+            </div>
+
+            <div class="row form-group">
+                <div class="col-md-6">
+                    <label>Contraseña:</label>
+                    <input type="tel" id="Pass" class="form-control" required="required">
+                </div>
+
+                <div class="col-md-6">
+                    <label>Confirmar contraseña:</label>
+                    <input type="tel" id="Pass2" class="form-control" required="required">
+                </div>
+            </div>
+
+            <br>
+            <input type="submit" class="btn btn-lg btn-info btn-block" value="¡Crea tu cuenta!">
+
+        <!--     <div id="respuesta" style="display: none;"></div>
+ -->
+        </form>
+    </div>
+</div>
+

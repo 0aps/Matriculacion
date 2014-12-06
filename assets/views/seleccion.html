@@ -1,0 +1,106 @@
+ <div class="container">
+
+  <h2>Bienvenido ****</h2>
+
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="cuatri">Cuatrimestre: </label>
+      <div class="col-sm-2">
+          <input type="text" id="cuatri" class="form-control" ng-model="Cuatri">
+      </div>
+    </div>
+  </form>
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Codigo</th>
+                <th>Asignatura</th>
+                <th>Creditos</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="asignatura in asig[Cuatri-1]">
+                <td>{{ asignatura.Codigo }}</td>
+                <td>{{ asignatura.Descripcion }}</td>
+                <td>
+                    <div class="row">
+                        <div class="col-md-8">
+                            <strong>{{ asignatura.Creditos }} </strong> 
+                        </div>
+                        
+                         <div class="col-md-4">
+                            <a href="javascript:void(0)" class="text-right" ng-click="addToList(asignatura)">
+                            <span style="font-size:18px;" class="glyphicon glyphicon-plus"></span> </a>
+                        </div>
+                    </div>
+                 </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<!--     Modal Windows Start -->
+    <a class="btn btn-primary" data-toggle="modal" data-target='#modal-id'>Ver Resumen</a>
+    <div class="modal fade" id="modal-id">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Resumen de Asignaturas</h4>
+                </div>
+                <div class="modal-body">
+                    
+                    <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Codigo</th>
+                                <th>Asignatura</th>
+                                <th>Credito</th>
+                                <th>Acción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="contact in contacts">
+                                <td>{{ contact.Codigo }}</td>
+                                <td>{{ contact.Descripcion }}</td>
+                                <td>{{ contact.Creditos }}</td>
+                                <td> <a href="javascript:void(0)" ng-click="edit(contact.id)">Editar</a> | <a href="javascript:void(0)" ng-click="delete(contact.id)">Borrar</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                     <form role="form">
+                        <div class="row form-group">
+                                <div class="col-md-4">
+                         <label>Codigo: </label>
+                          <input type="text" class="form-control" id=""  ng-model="newcontact.Codigo" placeholder="" >
+                        </div></div>
+
+                        <div class="form-group">
+                         <label>Asignatura: </label>
+                          <input type="text" class="form-control" id=""  ng-model="newcontact.Descripcion" placeholder="" >
+                        </div>
+
+                        <div class="form-group">
+                         <label>Crédito: </label>
+                          <input type="text" class="form-control" id=""  ng-model="newcontact.Creditos" placeholder="" >
+                        </div>
+                        
+                        <input type="hidden" ng-model="newcontact.id" />
+                        <input type="button" value="Guardar" ng-click="saveContact()" class="btn btn-primary" />
+                 </form>
+ 
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar Cambios</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->        
+
+</div>
+
